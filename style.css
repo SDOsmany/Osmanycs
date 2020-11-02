@@ -2,6 +2,8 @@ body { margin: 0;}
 /* Background Animation
 -------------------------------------------------------------------------------------------------------------*/
 .large-header {
+    transition: margin-left .5s;
+    padding: 20px;
     position: relative;
     width: 100%;
     background: #111;
@@ -48,8 +50,9 @@ body { margin: 0;}
 
 /* Button Animation
 -------------------------------------------------------------------------------------------------------------*/
-.btn-1 {
+.burger {
     /* border-color: #ffffff; */
+    transition: width 2s, height 2s, transform 2s;
     color: #fff;
     background-color: Transparent;
     /* box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db; */
@@ -62,103 +65,86 @@ body { margin: 0;}
         color: #F9F1E9;
         font-family: "Courier New", Courier, monospace;
         text-align: center;
-        top: 25%;
-        left: 8%;
+        top: 10%;
+        left: 4%;
         transform: translate3d(-50%, -50%, 0);
      
   }
-  .btn-1:hover {
+  /* .btn-1:hover {
     box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-  }
-  .btn-2 {
-    /* border-color: #ffffff; */
-    color: #fff;
-    background-color: Transparent;
-    /* box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db; */
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    font-size: 30px;
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        color: #F9F1E9;
-        font-family: "Courier New", Courier, monospace;
-        text-align: center;
-        top: 35%;
-        left: 8%;
-        transform: translate3d(-50%, -50%, 0);
-     
-  }
-  .btn-2:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-  }
-  .btn-3 {
-    /* border-color: #ffffff; */
-    color: #fff;
-    background-color: Transparent;
-    /* box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db; */
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    font-size: 30px;
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        color: #F9F1E9;
-        font-family: "Courier New", Courier, monospace;
-        text-align: center;
-        top: 45%;
-        left: 8%;
-        transform: translate3d(-50%, -50%, 0);
-     
-  }
-  .btn-3:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-  }
-  .btn-4 {
-    /* border-color: #ffffff; */
-    color: #fff;
-    background-color: Transparent;
-    /* box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db; */
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    font-size: 30px;
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        color: #F9F1E9;
-        font-family: "Courier New", Courier, monospace;
-        text-align: center;
-        top: 55%;
-        left: 8%;
-        transform: translate3d(-50%, -50%, 0);
-     
-  }
-  .btn-4:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-  }
-  .btn-5 {
-    /* border-color: #ffffff; */
-    color: #fff;
-    background-color: Transparent;
-    /* box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db; */
-    -webkit-transition: all 150ms ease-in-out;
-    transition: all 150ms ease-in-out;
-    font-size: 30px;
-        position: absolute;
-        margin: 0;
-        padding: 0;
-        color: #F9F1E9;
-        font-family: "Courier New", Courier, monospace;
-        text-align: center;
-        top: 65%;
-        left: 8%;
-        transform: translate3d(-50%, -50%, 0);
-     
-  }
-  .btn-5:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
-  }
-
+  } */
 
 /*END Button Animation
 -------------------------------------------------------------------------------------------------------------*/
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/*START Burger Animation
+-------------------------------------------------------------------------------------------------------------*/
+.burger {
+  font-size: 3rem;
+  text-align: center;
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+  }
+}
+/*END Burger Animation
+-------------------------------------------------------------------------------------------------------------*/
+.main-title{
+   font-weight: bold;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
