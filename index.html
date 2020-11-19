@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Osmany Resume Website</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="index.js"></script>
-    
-</head>
-<body>
+  </head>
+  <body>
     <div class="container demo">
-        <div class="content">
-           <div id="large-header" class="large-header">
-              <canvas id="demo-canvas"></canvas>
-              <h1 class="main-title"><span class="thin">Osmany</span> Pujol</h1>
-              <a href="#" class ="burger" onclick="openNav()">
-               &#9883;
-            </a>
-           </div>
-           <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About Me</a>
-            <a href="#">Resume</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
-          </div>
+      <div class="content">
+        <div id="large-header" class="large-header">
+          <canvas id="demo-canvas"></canvas>
+          <h1 class="main-title"><span class="thin">Osmany</span> Pujol</h1>
+          <a href="#" class="burger" id="MyBurger" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </a>
         </div>
-     </div>
-     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
-     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
-     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
-</body>
+        <div class="aboutme">
+          Computer Science student at Miami Dade. Always wanting to learn
+          something new . Looking for a job opportunity were I can continue to
+          enhance my programming skills and application architecture
+        </div>
+        <div class="resume"></div>
+        <div class="portfolio"></div>
+        <div class="contact"></div>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <a href="#">About Me</a>
+          <a href="/Resume.html">Resume</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+  </body>
 </html>
